@@ -1,0 +1,20 @@
+<products>
+    <product>
+        <id>101</id>
+        <name>Laptop</name>
+        <price>1200</price>
+        <category>Electronics</category>
+    </product>
+    <product>
+        <id>102</id>
+        <name>Chair</name>
+        <price>150</price>
+        <category>Furniture</category>
+    </product>
+    <product>
+        <id>103</id>
+        <name>Book</name>
+        <price>20</price>
+        <category>Stationery</category>
+    </product>
+</products>

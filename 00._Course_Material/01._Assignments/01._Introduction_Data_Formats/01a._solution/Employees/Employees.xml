@@ -1,0 +1,20 @@
+<employees>
+    <employee>
+        <id>201</id>
+        <name>Alice</name>
+        <age>30</age>
+        <department>HR</department>
+    </employee>
+    <employee>
+        <id>202</id>
+        <name>Bob</name>
+        <age>45</age>
+        <department>IT</department>
+    </employee>
+    <employee>
+        <id>203</id>
+        <name>Charlie</name>
+        <age>28</age>
+        <department>Sales</department>
+    </employee>
+</employees>
