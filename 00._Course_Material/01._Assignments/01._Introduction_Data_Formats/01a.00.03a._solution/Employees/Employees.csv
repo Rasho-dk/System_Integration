@@ -1,4 +1,4 @@
 id,name,age,department
 201,Alice,30,HR
 202,Bob,45,IT
-203,Charlie,28,Sales
+203,Charlie,28,Sales;IT;Finance

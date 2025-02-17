@@ -1,3 +1,0 @@
-ID: 101, Name: Laptop, Price: 1200, Category: Electronics
-ID: 102, Name: Chair, Price: 150, Category: Furniture
-ID: 103, Name: Book, Price: 20, Category: Stationery

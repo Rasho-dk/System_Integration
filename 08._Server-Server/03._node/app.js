@@ -3,8 +3,9 @@ import express from 'express';
 const app = express();
 
 app.get('/hobby/:hobby', (req, res) => {
-    console.log(req.params.hobby);
-    res.send("Your hobbies are: " + req.params.hobby);
+    // console.log(req.params.hobby);
+    console.log(req.params);
+    res.send("Your hobby is: " + req.params.hobby);
 
 });
 

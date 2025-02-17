@@ -34,7 +34,7 @@ app.get('/names/:name', (req, res) => {
 });
 
 app.get('/hobby/:hobby', (req, res) => {
-    console.log(req.query);
+    // console.log(req.query);
     res.send("Your hobby are: " + req.query.hobbies);
     //http://localhost:8080/hobbies?hobbies=football
 });

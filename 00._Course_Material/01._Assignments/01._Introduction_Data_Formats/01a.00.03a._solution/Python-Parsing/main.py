@@ -2,8 +2,13 @@ from utilities.utils import base_path
 from fastapi import FastAPI
 from modules import *
 import os
+import requests
+# from fastapi.responses import JSONResponse
+
 
 app = FastAPI()
+port = 8080
+localHost = f"http://127.0.0.1:{port}"
 
 @app.get("/")
 def root():
@@ -17,6 +22,7 @@ def root():
             "/txt": "Returns the Text data from the employees.txt file"
         }
     }
+
 
 @app.get("/json")
 def json_root():
@@ -37,6 +43,40 @@ def csv_root():
 @app.get("/txt")
 def txt_root():
     return parse_txt(os.path.join(base_path("Employees"), "employees.txt"))
+
+
+@app.get('/getXmlRequestDataFromExpress')
+def get_xml_request_data_from_express():
+    response = requests.get(f"{localHost}/xml")
+    json_data = response.json()
+    return json_data
+
+@app.get('/getJsonRequestDataFromExpress')
+def get_json_request_data_from_express():
+    response = requests.get(f"{localHost}/json")
+    json_data = response.json()
+    return json_data
+    
+
+
+@app.get('/getCsvRequestDataFromExpress')
+def get_csv_request_data_from_express():
+    response = requests.get(f"{localHost}/csv")
+    json_data = response.json()
+    return json_data
+
+@app.get('/getYamlRequestDataFromExpress')
+def get_yaml_request_data_from_express():
+    response = requests.get(f"{localHost}/yaml")
+    json_data = response.json()
+    return json_data
+                        
+@app.get('/getTxtRequestDataFromExpress')
+def get_txt_request_data_from_express():
+    response = requests.get(f"{localHost}/txt")
+    json_data = response.json()
+    return json_data
+
 
 
 

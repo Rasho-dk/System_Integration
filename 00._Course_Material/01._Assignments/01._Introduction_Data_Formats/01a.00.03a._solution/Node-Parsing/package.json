@@ -1,0 +1,23 @@
+{
+  "name": "parsing",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv": "^6.3.11",
+    "csvtojson": "^2.0.10",
+    "express": "^4.21.2",
+    "fast-xml-parser": "^4.5.1",
+    "js-yaml": "^4.1.0",
+    "papaparse": "^5.5.2",
+    "parse-string": "^1.2.9",
+    "sqlite3": "^5.1.7"
+  },
+  "description": ""
+}
