@@ -41,5 +41,6 @@ app.listen(PORT, () => {
   console.log("Server is running on port", PORT);
 });
 
-// tre ting som man kan brug Server send evnent
-// brower HTML js , dirkte i borwseren , API client PostMand , 
+// Eksamen spørgsmål:
+// tre ting som man kan brug Server send evnent?
+// brower HTML js , dirkte i borwseren , API client PostMan 

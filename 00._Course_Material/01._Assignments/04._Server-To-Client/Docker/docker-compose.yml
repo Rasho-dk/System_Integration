@@ -1,0 +1,39 @@
+
+services:
+  postgres:
+    image: postgres:latest
+    restart: always
+    container_name: postgres_container
+    environment:
+      POSTGRES_USER: rasho-dk
+      POSTGRES_PASSWORD: jafarFastRider
+      POSTGRES_DB: rasho_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./postgresql.conf:/etc/postgresql/postgresql.conf
+      - ./pg_hba.conf:/etc/postgresql/pg_hba.conf
+
+volumes:
+  postgres-data:
+
+
+
+# to get the data base use: 
+ # psql -U rasho-dk -d rasho_DB
+ # \dt check for tables
+
+# docker-compose down
+#Remove the existing volume (optional but ensures a clean setup):
+  # docker volume rm $(docker volume ls -q | grep postgres-data)
+
+#docker-compose up -d
+
+# docker logs postgres_container
+
+# psql -U username -h localhost -d database_name
+# open sql
+  # docker exec -it postgres_container bash
+# docker run --rm -it postgres psql -h 192.168.111.2 -U rasho-dk -d rasho-dk
