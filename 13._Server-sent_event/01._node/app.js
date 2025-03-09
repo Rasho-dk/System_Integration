@@ -11,12 +11,13 @@ const app = express();
 
 // definde envriment veriabel PORT=9090 node app.js
 // console.log(process.env.PORT);
-
+// det gør tilganglige for public at kunne bruge disse koder
 app.use(express.static('public'));
 
 /*
 
 */
+
 // server send evnet
 app.get("/synchronizetime", (req, res) => {
     res.writeHead(200, {
@@ -33,6 +34,12 @@ app.get("/synchronizetime", (req, res) => {
 // det er protocol for server send event
 function sendTimeToClient(res){
     const time = new Date().toISOString();
+    /*
+    hvis ikke bruger data og \n\n` så få vi 
+    data line 1
+    data line 2
+    vi bruger eventsource til at få fat i data  kan bruge 3 events
+    */
     res.write(`data: ${time}\n\n`); // det er ikke som send or end // dvs. at det stopper ikke. 
 };
 

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSE FastAPI</title>
+</head>
+<body>
+    <h1>SEE</h1>
+    <!-- short cut div#date + tabe -->
+    <div id="date">
+        
+    </div>
+
+    
+    <script>
+        const dateDiv = document.getElementById('date');
+        const eventSource = new EventSource('/sse'); // få fat i endpointet i server
+
+        // hver event har sin eget id (uniqe id)
+        eventSource.onmessage = (event) => {
+            dateDiv.textContent = event.data;
+
+        };
+        
+       
+    </script>
+</body>
+</html>

@@ -37,3 +37,15 @@ volumes:
 # open sql
   # docker exec -it postgres_container bash
 # docker run --rm -it postgres psql -h 192.168.111.2 -U rasho-dk -d rasho-dk
+
+
+
+# apt-get update
+# apt-get install nano
+
+
+# nano /var/lib/postgresql/data/postgresql.conf 
+# listen_addresses = '*'
+# nano /var/lib/postgresql/data/pg_hba.conf
+ # host    all             all
+ # host    all             all
