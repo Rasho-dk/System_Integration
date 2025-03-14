@@ -1,5 +1,5 @@
-#  poetry init -n  
-#  poetry add fastapi uvicorn
+# poetry init -n  
+# poetry add fastapi uvicorn
 # poetry shell
 # uvicorn main:app --reload
 # test connection : localhost:8000
