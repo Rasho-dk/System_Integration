@@ -22,7 +22,7 @@ async function read_csv_file(selected_file) {
 async function read_json_file(selected_file) {
     await parsing.json_parse(get_path(selected_file));
     const data = parsing.get();
-    // console.log("Parsed JSON Data:", data);
+    console.log("Parsed JSON Data:", JSON.stringify(data));
     return data;
 }
 
@@ -44,7 +44,7 @@ async function read_yaml_file(selected_file) {
 async function read_xml_file(selected_file) {
     await parsing.xml_parse(get_path(selected_file));
     const data = parsing.get();
-    // console.log("Parsed XML Data:", data);
+    console.log("Parsed XML Data:", JSON.stringify(data));
     return data;
 }
 
@@ -57,7 +57,7 @@ export { read_csv_file, read_json_file, read_text_file, read_yaml_file, read_xml
 // read_json_file('Products/products.json');
 // read_text_file('Products/products.txt');
 // read_yaml_file('Products/products.yaml');
-// read_xml_file('Products/products.xml');
+read_xml_file('Products/products.xml');
 
 
 

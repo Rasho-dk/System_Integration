@@ -37,7 +37,10 @@ def parse_txt(file):
     data = [dict(item.split(": ") for item in line.strip().split(", ")) for line in lines]
     print(f"Text Data from {file}:", data)
 
-
+'''
+    This section is for testing the functions
+    solution for 01a.
+'''
 if __name__ == "__main__":
     # Call functions for products and employees
     # C:\Users\shero\OneDrive - Københavns Erhvervsakademi\System Intergration\01a\Products\products.csv
@@ -50,10 +53,11 @@ if __name__ == "__main__":
 
     # print(base_path)
     # parse_json(os.path.join(products_path, "products.json"))
-    parse_yaml(os.path.join(products_path, "products.yaml"))
+    # parse_yaml(os.path.join(products_path, "products.yaml"))
     # parse_xml(os.path.join(products_path, "products.xml"))
-    # parse_csv(os.path.join(employees_path, "employees.csv"))
+    parse_csv(os.path.join(employees_path, "employees.csv"))
     # parse_txt(os.path.join(employees_path, "employees.txt"))
+
 
 
 
