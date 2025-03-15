@@ -5,6 +5,13 @@ import os
 import requests
 # from fastapi.responses import JSONResponse
 
+'''
+    OBS: This notebook conatins the solution for the assignment 01a.03a.
+    The solution is based on the following requirements:
+    - 01a. Create funtions for parsing JSON, XML, YAML, CSV and TXT files.
+    - 03a. Create a FastAPI server that returns the parsed data from the files.
+    - 03a. Server should interact with the Express server and return the parsed data.
+'''
 
 app = FastAPI()
 port = 8080
@@ -45,6 +52,8 @@ def txt_root():
     return parse_txt(os.path.join(base_path("Employees"), "employees.txt"))
 
 
+
+# This is section is for the requests from the express server ; 03a.
 @app.get('/getXmlRequestDataFromExpress')
 def get_xml_request_data_from_express():
     response = requests.get(f"{localHost}/xml")
@@ -80,21 +89,23 @@ def get_txt_request_data_from_express():
 
 
 
+''' 
+    - This is section is for parsing data; 01a.
+    - Code is been imported from the modules folder, which contains the parsing functions.
+'''
 
-
-
-# if __name__ == "__main__":
+if __name__ == "__main__":
     # Call functions for products and employees
     # C:\Users\shero\OneDrive - Københavns Erhvervsakademi\System Intergration\01a\Products\products.csv
-    # base_path = os.path.dirname(__file__)
-    # products_path = os.path.join(os.path.dirname(__file__), "..", "Products")
-    # employees_path = os.path.join(os.path.dirname(__file__), "..", "Employees")
+    base_path = os.path.dirname(__file__)
+    products_path = os.path.join(os.path.dirname(__file__), "..", "Products")
+    employees_path = os.path.join(os.path.dirname(__file__), "..", "Employees")
 
 
     # print(f"JSON Path: {products_path}")
 
     # print(base_path)
-    # parse_json(os.path.join(products_path, "products.json"))
+    parse_json(os.path.join(products_path, "products.json"))
     # parse_yaml(os.path.join(products_path, "products.yaml"))
     # parse_xml(os.path.join(products_path, "products.xml"))
     # parse_csv(os.path.join(employees_path, "employees.csv"))
