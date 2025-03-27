@@ -41,11 +41,11 @@
     - **What is OpenAPI?** 
         * OpenAPI is a specification for describing RESTful APIs in a standardized format, making it easier for developers to understand and use APIs.
 
-    #### Key Points:
-    - **Swagger**: Originally the name of the specification and the company behind it.
-    - **Version History**: OpenAPI began with version 3.0, and updates have continued to version 3.1.0, which added support for JSON Schema.
-    - **File Syntax**: OpenAPI uses YAML (Yet Another Markup Language), which is human-readable and easy to write.
+    - **Key Points:**
+        *  **Swagger**: Originally the name of the specification and the company behind it.
+        * **Version History**: OpenAPI began with version 3.0, and updates have continued to version 3.1.0, which added support for JSON Schema.
+        * **File Syntax**: OpenAPI uses YAML (Yet Another Markup Language), which is human-readable and easy to write.
 
-    #### Why Does OpenAPI Exist?
-    - To provide a clear and consistent way to describe APIs.
-    - To facilitate better API documentation, client generation, and automated testing.
+    - **Why Does OpenAPI Exist?**
+        * To provide a clear and consistent way to describe APIs.
+        * To facilitate better API documentation, client generation, and automated testing.
