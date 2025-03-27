@@ -9,8 +9,8 @@ class Parsing {
 
   async csv_parse(filePath) {
     try {
-      const rawData = await csv().fromFile(filePath, "utf-8");
-      this.data = JSON.parse(JSON.stringify(rawData));
+      const rawData = await csv().fromFile(filePath);
+      this.data = JSON.stringify(rawData);
     } catch (err) {
       console.error("Error parsing CSV file:", err);
     }

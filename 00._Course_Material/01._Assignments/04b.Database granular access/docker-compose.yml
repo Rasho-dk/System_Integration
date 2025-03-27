@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres_container
+    environment:
+      POSTGRES_USER: admin_user
+      POSTGRES_PASSWORD: admin123
+      POSTGRES_DB: cia
+    ports:
+      - "5431:5432"
+    volumes:
+      - ./data:/var/lib/postgresql/data
+      - ./full_backup.sql:/docker-entrypoint-initdb.d/full_backup.sql

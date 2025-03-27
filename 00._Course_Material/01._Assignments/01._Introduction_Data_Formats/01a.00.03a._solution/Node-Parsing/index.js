@@ -55,9 +55,9 @@ export { read_csv_file, read_json_file, read_text_file, read_yaml_file, read_xml
 // read_csv_file('Products/products.csv'); 
 
 // read_json_file('Products/products.json');
-// read_text_file('Products/products.txt');
+read_text_file('Products/products.txt');
 // read_yaml_file('Products/products.yaml');
-read_xml_file('Products/products.xml');
+// read_xml_file('Products/products.xml');
 
 
 
