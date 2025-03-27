@@ -6,7 +6,7 @@ let remoteStream;
 let peerConnection;
 
 
-// en list af candidater
+// en list af candidater af STUN server
 const servers = {
   iceServers: [
       {
