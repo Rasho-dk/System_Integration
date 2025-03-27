@@ -77,7 +77,7 @@
 - When we say "First peer creates an offer in the form of an SDP object (Session Description Protocol)," it refers to a key step in establishing a WebRTC connection between two peers (e.g., two web browsers). Here’s a breakdown of what this means:
 
 ### What is SDP (Session Description Protocol)?
-    SDP is a format used to describe multimedia communication sessions. It includes information about the media types (audio, video), codecs, network information, and other parameters necessary for establishing a connection.
+SDP is a format used to describe multimedia communication sessions. It includes information about the media types (audio, video), codecs, network information, and other parameters necessary for establishing a connection.
 
 ### The Offer Process
 
