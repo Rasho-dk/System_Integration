@@ -2,7 +2,7 @@ services:
   db:
     image: postgres:latest
     env_file:
-      - .env # this file contains the environment variables for the database from the .env file
+      - .env
     ports:
       - "5432:5432"
     volumes:

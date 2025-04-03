@@ -1,5 +1,5 @@
 /**
- * migrationer handler ikke kun om oprette schema men også colimmer
+ * migrationer handler ikke kun om oprette schema men også kolonner
  */
 export function up(knex) {
     return knex.schema
