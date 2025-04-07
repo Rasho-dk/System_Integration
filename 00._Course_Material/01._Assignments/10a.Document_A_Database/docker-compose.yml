@@ -7,6 +7,7 @@ services:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+      - "./initdb/init.sql:/docker-entrypoint-initdb.d/init.sql" #  adding new line when we took a backup pgdump to test that i can init the database from the base
 
 volumes:
   postgres_data:

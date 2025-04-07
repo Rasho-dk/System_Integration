@@ -1,0 +1,72 @@
+{
+    "schema": [
+        {
+            "table": "knex_migrations",
+            "columns": [
+                {
+                    "field": "id",
+                    "type": "integer"
+                },
+                {
+                    "field": "name",
+                    "type": "character varying"
+                },
+                {
+                    "field": "batch",
+                    "type": "integer"
+                },
+                {
+                    "field": "migration_time",
+                    "type": "timestamp with time zone"
+                }
+            ]
+        },
+        {
+            "table": "knex_migrations_lock",
+            "columns": [
+                {
+                    "field": "index",
+                    "type": "integer"
+                },
+                {
+                    "field": "is_locked",
+                    "type": "integer"
+                }
+            ]
+        },
+        {
+            "table": "products",
+            "columns": [
+                {
+                    "field": "id",
+                    "type": "integer"
+                },
+                {
+                    "field": "price",
+                    "type": "numeric"
+                },
+                {
+                    "field": "name",
+                    "type": "character varying"
+                }
+            ]
+        },
+        {
+            "table": "users",
+            "columns": [
+                {
+                    "field": "id",
+                    "type": "integer"
+                },
+                {
+                    "field": "first_name",
+                    "type": "character varying"
+                },
+                {
+                    "field": "last_name",
+                    "type": "character varying"
+                }
+            ]
+        }
+    ]
+}
