@@ -1,0 +1,20 @@
+[project]
+name = "script"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Rasho-dk",email = "sheroshvan@icloud.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "alembic (>=1.15.2,<2.0.0)",
+    "sqlalchemy (>=2.0.40,<3.0.0)",
+    "psycopg2 (>=2.9.10,<3.0.0)",
+    "pymysql (>=1.1.1,<2.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <h2>Basic Form Express</h2>
+    <form action="http://localhost:8080/form" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" name="username" placeholder="username....">
+        
+        <label for="password">password:</label>
+        <input type="password" name="password" placeholder="password....">
+
+        <input type="submit" value="Send Form Data">
+    </form>
+
+
+    <h2>Basic Form FASTAPI</h2>
+        <form action="http://localhost:8000/form" method="POST">
+
+        <label for="username">Username:</label>
+        <input type="text" name="username" placeholder="username....">
+        
+        <label for="password">password:</label>
+        <input type="password" name="password" placeholder="password....">
+
+        <input type="submit" value="Send Form Data">
+    </form>
+
+    <h2>File Form Express</h2>
+    <form action="http://localhost:8080/fileform" method= "POST", enctype="multipart/form-data">
+        <label for="file">File</label>
+        <!--ved at brug accept bræncer vi iputtet af file men i browser kan vi se show all option og viser det helle
+         # accept kan bliver inject ved browser tool at skrive det om så kan alle accepter
+         # ved at tilføre multiple kan vi vælge flere filer
+        -->
+        
+        <input type="file" name="file" accept="image/*"> 
+
+        <label>Description</label>
+        <input type="text" name="description">
+
+
+        <input type="submit" value="Send File">
+
+    </form>
+
+
+    <h2>File Form FASTAPI</h2>
+    <form action="http://localhost:8000/fileform" method= "POST", enctype="multipart/form-data">
+        <label for="file">File</label>
+        <!--ved at brug accept bræncer vi iputtet af file men i browser kan vi se show all option og viser det helle
+         # accept kan bliver inject ved browser tool at skrive det om så kan alle accepter
+         # ved at tilføre multiple kan vi vælge flere filer
+        -->
+        
+        <input type="file" name="file" accept="image/*"> 
+
+        <label>Description</label>
+        <input type="text" name="description">
+
+
+        <input type="submit" value="Send File">
+
+    </form>
+
+    <script>
+        const fileInput = document.querySelector('input[type="file"]');
+        // this happen when i uplopad a file
+        fileInput.addEventListener('change', (event)  => {
+            // console.log(event); 
+            const file = event.target.files[0]; // look at browser and its on the FileList
+            // choose the file type
+            // validate the type
+            const validateTypes = ['image/png', 'image/jpeg', 'image/svg'];
+            if(!validateTypes.includes(file.type)){
+                alert('Please choose a valid file type');
+                fileInput.value = ''; // reset the input
+                return;
+            }
+
+            // validate the size
+            const maxSize = 20 * 1024 * 1024; // 20MB
+            if(file.size > maxSize){
+                alert(`File too big. Max size is ${maxSize}MB`);
+                fileInput.value = ""; // reset the input
+                return;
+            }
+        });
+    </script>
+    
+</body>
+</html>
