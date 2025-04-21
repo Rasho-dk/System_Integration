@@ -1,0 +1,25 @@
+﻿{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "http": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": false,
+      "applicationUrl": "http://localhost:5076",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "PAYPAL_CLIENT_ID": "AZmp850pPxw1vhMoNoQEr71Yiow_8CWQJqG5aqzXmCpx0TLqsu3DBpiEKdvp8qBeIqklGDahqSmx7MXg",
+        "PAYPAL_CLIENT_SECRET": "EO2iUfq6QAiXlbQ8wmsmJHGbyYOnV0eYx3R1sLPzaR83_EV11zHTtAf8LbmNH8Tfw8sqFzz0Zgm7N9TL"
+      }
+    },
+    "https": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": false,
+      "applicationUrl": "https://localhost:7146;http://localhost:5076",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
