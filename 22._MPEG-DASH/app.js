@@ -21,15 +21,13 @@ Uden chunks vil det ikke være mulighed at køre i små bider og det vil tage la
 Shakar player : bruger chunks og manifest filen til at loade videoen ift ens internet hastighed.
 Ved chunks : er biligere indet at loade videoen og det er hurtigere at loade videoen.
 fmpeg : det er dyrt
-pros vs Cons : 
-Pros:
-- 
-- 
+We used : https://sample-videos.com/ to get the video 
 
 
 
 Denne bliver brug når vi cd-in i videos mappe og køre ffmpeg kommandoen i terminalen
 denne opretter manifest file mi xml-format og chunket video filer i mp4-format
+to install ffmpeg: https://ffmpeg.org/download.html#build-mac
 ffmpeg -i input.mp4 \
 -map 0:v -map 0:a -b:v:0 300k -s:v:0 426x240 -profile:v:0 baseline -b:a:0 64k \
 -map 0:v -map 0:a -b:v:1 700k -s:v:1 640x360 -profile:v:1 main     -b:a:1 96k \
