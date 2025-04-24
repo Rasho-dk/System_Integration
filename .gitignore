@@ -3,6 +3,7 @@ videos
 uploads
 .vite
 .env
+videos
 
 ### Python ###
 # Byte-compiled / optimized / DLL files

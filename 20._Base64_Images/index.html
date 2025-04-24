@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base64 Images</title>
+    <style>
+        .gif {
+    background-image: url(data:image/gif;base64,R0lGODlhCAAHAIABAGSV7f///yH+EUNyZWF0ZWQgd2l0aCBHSU1QACH5BAEKAAEALAAAAAAIAAcAAAINjI8BkMq41onRUHljAQA7);
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 50px;
+    }
+    </style>
+</head>
+<body>
+    <div class="gif"></div>
+
+    <!--
+    Base64 image example encoded in the HTML file.
+    minde type:  image/png
+    alt : accssibility text
+    Hvrofro bruger vi base64 i chrome dino: det for at undgå at læse i file systemet og det ligger i browserens.
+        Man gemmer ikke media filer i database - gem hvor filer ligger 
+        Vi kan gemme filer i mysql i blob storage
+        Så vi gemmer i file storage der vi har adgnag med det samme tværimod i database vi det tager tid. 
+        Penge argument: Det er dyrt at have filer i database og det er langsomere at hente dem
+            , men det er nemmere at have i file server. 
+    -->
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4
+  //8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==" alt="Red dot" />
+
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABIAQMAAABvIyEEAAAABlBMVEUAAABTU1OoaSf/AAAAAXRSTlMAQObYZgAAAGxJREFUeF7tyMEJwkAQRuFf5ipMKxYQiJ3Z2nSwrWwBA0+DQZcdxEOueaePp9+dQZFB7GpUcURSVU66yVNFj6LFICatThZB6r/ko/pbRpUgilY0Cbw5sNmb9txGXUKyuH7eV25x39DtJXUNPQGJtWFV+BT/QAAAAABJRU5ErkJggg=="    
+    alt="chrome dino" />
+
+</body>
+</html>
