@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple QraphQl example</title>
+</head>
+<body>
+    <h1>GraphQl</h1>
+
+    <p>Key:</p>
+    <div id="key"></div>
+
+
+    <p>Value:</p>
+    <div id="value"></div>
+
+    <script>
+        const query = `query{
+               hello 
+            }`;
+
+            fetch("/graphql", {
+                method: "POST",
+                // vi vil gerne sende som JSON
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                // ved at bruge { query } kan vi sende en query som value
+                body: JSON.stringify({ query })
+            })
+            .then((res) => res.json())
+            .then((result) => {
+                console.log(result);
+                document.getElementById("key").textContent = Object.keys(result.data);
+                document.getElementById("value").textContent = result.data.hello;
+            });
+    </script>
+    
+</body>
+</html>
