@@ -20,3 +20,10 @@ async def github_webhook(request: Request, response: Response):
         response.status_code = 204
     else: 
         response.status_code = 400
+
+
+@app.post("/PaymentInitiated")
+async def github_webhook(request: Request):
+    data = await request.body()
+    print(json.loads(data))
+    return
