@@ -23,9 +23,11 @@ type_defs = load_schema_from_path("graphql/schema.graphql")
 # resolvers = [query, mutation, subscription]
 
 resolvers = [resolvers.query, resolvers.mutation]
+# combine the graphql schema and resolvers to create an executable schema
 schema = make_executable_schema(type_defs, resolvers)
 
+# create a GraphQL app with the schema and custom error formatter using Ariadne
 graphQL = GraphQL(schema, error_formatter=custom_error_formatter, debug=IS_DEBUG)
 
-
+# mounting the GraphQL app to the FastAPI app  and call it with the path "/graphql" e.g http://localhost:8000/graphql
 app.mount("/graphql", graphQL)
