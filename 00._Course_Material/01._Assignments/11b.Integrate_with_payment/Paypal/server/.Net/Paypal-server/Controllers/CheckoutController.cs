@@ -133,6 +133,7 @@ public class CheckoutController : Controller
         CheckoutPaymentIntent intent = (CheckoutPaymentIntent)
             Enum.Parse(typeof(CheckoutPaymentIntent), "CAPTURE", true);
         
+        // Inegrate the PayPal SDK to create an order
         CreateOrderInput createOrderInput = new CreateOrderInput
         {
             Body = new OrderRequest
